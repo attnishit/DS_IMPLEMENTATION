@@ -29,9 +29,7 @@ public:
             }
             a[++top]=val;
         }
-
 };
-
 int main(){
     int n;
     cin >> n;
@@ -45,7 +43,4 @@ int main(){
         obj.pop();
     }
     return 0;
-
-
-
 }
