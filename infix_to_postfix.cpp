@@ -91,6 +91,11 @@ int main(){
             stack.push(s[i]);
         }
     }
+    while(stack.tops() != 'X'){ 
+        char c=stack.tops();
+        stack.pop(); 
+        s1+=c; 
+    } 
     cout<<s1;
     return 0;
 
