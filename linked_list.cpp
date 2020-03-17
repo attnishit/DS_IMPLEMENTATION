@@ -126,9 +126,34 @@ class linked_list{
 			size--;
 
 		}
+		void detect_cycle(){
+			Node<T>* slow = start;
+			Node<T>* fast = start;
+			int f = 0;
+			while(slow and fast and fast->link){
+				slow = slow->link;
+				fast = fast->link->link;
+				if(slow == fast){
+					f = 1;
+					cout <<"cycle found\n";
+					Node<T>* tmp = slow;
+					int c = 0;
+					while(tmp!=slow){
+						c++;
+						tmp = tmp->link;
+					}
+					cout << "length of cycle is = " << c << endl; 
+					break;
+				}
+			}
+			if(!f){
+				cout << "cycle not found\n";
+			}
+			
+		}
 };
-int main(){
-	int n;
+int main()
+{	int n;
 	linked_list<int>list;
 	cout<<"enter the no of Nodes\n";
 	cin >> n;
@@ -149,6 +174,7 @@ int main(){
 	cout<<"5. For Deletion From End\n";
 	cout<<"6. For Deletion From Any Position\n";
 	cout<<"7. Display current list\n";
+	cout<<"8. Detect cycle and  its length\n";
 	cout<<"0. For Quit\n";
 	cin >> choice;
 	while(choice){
@@ -183,6 +209,9 @@ int main(){
 					break;
 			case 7:
 					list.display_list();
+					break;
+			case 8:
+					list.detect_cycle();
 					break;
 			default:
 					cout<<"wrong choice,please input again\n";
