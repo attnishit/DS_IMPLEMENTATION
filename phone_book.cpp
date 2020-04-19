@@ -16,9 +16,8 @@ class Node{
         }
     friend class dlist;
 };
-class dlist{
+class dlist {
     Node *head,*temp,*ptr;
-    Node *ptr1, *ptr2, *dup;
 public:
     Node *previousn;        
     void insert();
@@ -34,9 +33,6 @@ public:
         head = NULL;
         temp = NULL;
         ptr = NULL;
-        ptr1 = NULL;
-        ptr2 = NULL;
-        dup = NULL;
     }
 };
 void dlist::accept(){
@@ -45,11 +41,11 @@ void dlist::accept(){
     char name[60];
     char ans;
     do{
-        cout << "ENTER NAME      :";
+        cout << "ENTER NAME : ";
         cin>>name;
-        cout << "ENTER  PHONE NUMBER    :";
+        cout << "ENTER  PHONE NUMBER : ";
         cin >> number;
-        cout << "ENTER G-MAIL    :";
+        cout << "ENTER G-MAIL : ";
         cin >> gmail;
         temp = new Node(name,number,gmail);
         if(head == NULL){
@@ -63,7 +59,7 @@ void dlist::accept(){
             ptr->next = temp;
             temp->previous = ptr;
         }
-        cout<<"DO YOU WANT TO CONTINUE?????????";
+        cout<<"DO YOU WANT TO CONTINUE? PRESS 'y' FOR YES : ";
             cin >> ans;
     }while(ans == 'y');
 
@@ -126,7 +122,7 @@ void dlist::deletecontact(char s[20]){
         delete(ptr);
     }
     if(c==2){
-        cout<<"Entered name is not in the list";
+        cout<<"ENTERED NAME IS NOT IN THE  PHONE LIST\n";
     }
     else{
         cout<<"YOUR CONTACT IS SUCCESSFULLY DELETED\n\n";
@@ -149,7 +145,7 @@ void dlist::searchbyname(char na[10]){
         ptr=ptr->next;
     }
     if(!c){
-        cout << "Name not found \n";
+        cout << "NAME NOT FOUND \n";
     }
 }
 void dlist::searchbynumber(char num[20]){
@@ -168,7 +164,7 @@ void dlist::searchbynumber(char num[20]){
         ptr = ptr->next;
     } 
     if(!c){
-        cout << "Phone number is not present \n";
+        cout << "PHONE NUMBER IS NOT PRESENT \n";
     }  
 }
 void dlist::searchbygmail(char gm[20]){
@@ -187,7 +183,7 @@ void dlist::searchbygmail(char gm[20]){
         ptr = ptr->next;
     }
     if(!c){
-        cout << "Gmail not found \n";
+        cout << "EMAIL ADDRESS IS NOT PRESENT \n";
     }
 }
 void dlist::update(char n[20]){
@@ -236,10 +232,7 @@ int main(){
     cout << "************************************************\n";
     cout << "************************************************\n";
     cout << "************************************************\n";
-    cout << "\n\nWHAT IS YOUR NAME?\n";
-    cin.getline(name,20);
-    cout << "\n\n!!!!!!!!!!!!!!!!!!!!!!!   WELCOME " << name <<"   !!!!!!!!!!!!!!!!!!!!!";
-    cout << "\n\n\nLET'S CREATE OUR PHONEBOOK " << name << "  \n\n";
+    cout << "\nENTER THE DETAILS OF A PERSON YOU WANT TO ADD TO YOUR PHONEBOOK \n";
     d1.accept();
     d1.sort();
     do{
