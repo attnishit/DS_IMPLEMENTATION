@@ -105,7 +105,7 @@ void dlist::deletecontact(char s[20]){
         }
         ptr=ptr->next;
     }
-    if(c==1 && ptr!=head && ptr->next!=NULL){
+    if(c==1 and ptr!=head and ptr->next!=NULL){
         ptr->previous->next=ptr->next;
        ptr->next->previous=ptr->previous;
        delete(ptr);
