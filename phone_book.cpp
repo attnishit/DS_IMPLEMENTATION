@@ -81,8 +81,8 @@ void dlist::sort(){
     int temp;
     char n[10];
     // selection sort
-    for(i=head;i->next!=NULL;i=i->next){
-        for(j=i->next;j!=NULL;j=j->next){
+    for(i = head;i->next != NULL;i = i->next){
+        for(j = i->next;j != NULL;j = j->next){
             temp=strcmp(i->name,j->name);
             if(temp>0){
                strcpy(n,i->name);
@@ -94,16 +94,16 @@ void dlist::sort(){
 }
 void dlist::deletecontact(char s[20]){
     int c=0;
-    ptr=head;
+    ptr = head;
     while(ptr!=NULL){
-        if(strcmp(s,ptr->name)==0){
-            c=1;
+        if(strcmp(s,ptr->name) == 0){
+            c = 1;
             break;
         }
         else{
-            c=2;
+            c = 2;
         }
-        ptr=ptr->next;
+        ptr = ptr->next;
     }
     if(c == 1 and ptr != head and ptr->next != NULL){
         ptr->previous->next = ptr->next;
