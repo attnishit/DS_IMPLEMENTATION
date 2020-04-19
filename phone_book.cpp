@@ -105,22 +105,22 @@ void dlist::deletecontact(char s[20]){
         }
         ptr=ptr->next;
     }
-    if(c==1 and ptr!=head and ptr->next!=NULL){
-        ptr->previous->next=ptr->next;
-       ptr->next->previous=ptr->previous;
+    if(c == 1 and ptr != head and ptr->next != NULL){
+        ptr->previous->next = ptr->next;
+       ptr->next->previous = ptr->previous;
        delete(ptr);
     }
-    if(ptr==head){
-        head=head->next;
-        head->previous=NULL;
+    if(ptr == head){
+        head = head->next;
+        head->previous = NULL;
         delete(ptr);
     }
-    if(ptr->next==NULL){
-        ptr->previous->next=NULL;
-        ptr->previous=NULL;
+    if(ptr->next == NULL){
+        ptr->previous->next = NULL;
+        ptr->previous = NULL;
         delete(ptr);
     }
-    if(c==2){
+    if(c == 2){
         cout<<"ENTERED NAME IS NOT IN THE  PHONE LIST\n";
     }
     else{
