@@ -231,7 +231,7 @@ int main(){
     cout << "************************************************\n";
     cout << "************************************************\n";
     cout << "************************************************\n";
-    cout << "\nENTER THE DETAILS OF A PERSON YOU WANT TO ADD TO YOUR PHONEBOOK \n";
+    cout << "\nENTER THE DETAILS OF A PERSON YOU WANT TO ADD TO YOUR PHONEBOOK... \n";
     d1.accept();
     d1.sort();
     do{
@@ -253,7 +253,7 @@ int main(){
                 d1.sort();
                 break;
             case 4:
-                cout << "\nENTER THE NAME YOU WANT TO DELETE FROM PHONEBOOK\n";
+                cout << "\nENTER THE NAME YOU WANT TO DELETE FROM PHONEBOOK...\n";
                 cin >> name;
                 d1.deletecontact(name);
                 break;
@@ -262,17 +262,17 @@ int main(){
                     cin >> a;
                     switch(a){
                         case 1:
-                                cout << "ENTER THE NAME TO BE SEARCHED\n";
+                                cout << "ENTER THE NAME TO BE SEARCHED..\n";
                                 cin >> name;
                                 d1.searchbyname(name);
                                 break;
                         case 2:
-                                cout << "ENTER THE NUMBER TO BE SEARCHED\n";
+                                cout << "ENTER THE NUMBER TO BE SEARCHED..\n";
                                 cin >> number;
                                 d1.searchbynumber(number);
                                 break;
                         case 3:
-                                cout << "ENTER THE EMAIL ADDRESS TO BE SEARCHED\n";
+                                cout << "ENTER THE EMAIL ADDRESS TO BE SEARCHED..\n";
                                 cin >> gmail;
                                 d1.searchbygmail(gmail);
                                 break;
