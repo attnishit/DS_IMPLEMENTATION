@@ -108,7 +108,7 @@ int32_t main() {
     node->right->left = new Node(15); 
     node->right->right = new Node(8); 
     inorder(node);
-	cout << "\n";
+    cout << "\n";
     int val = 6;
     Node* root = deletion(node,val); 
     inorder(root);
